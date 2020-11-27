@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+    <com.bsuir.oitip.lab2.view.Canvas android:id="@+id/canvas" android:layout_width="match_parent" android:layout_height="match_parent"/>
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" android:elevation="4dp">
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/layers"
+                android:background="#ccc"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="60dp">
+            </androidx.recyclerview.widget.RecyclerView>
+        <HorizontalScrollView android:background="@android:color/white" android:layout_width="match_parent" android:layout_height="60dp" android:fillViewport="true">
+            <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <ImageView app:tint="#000" android:src="@drawable/ic_open" android:onClick="open" style="@style/toolbar_icon"/>
+                <ImageView app:tint="#000" android:src="@drawable/ic_save" android:onClick="save" style="@style/toolbar_icon"/>
+                <View style="@style/spacer"/>
+                <ImageView app:tint="#000" android:src="@drawable/ic_undo" android:onClick="undo" style="@style/toolbar_icon"/>
+                <ImageView app:tint="#000" android:src="@drawable/ic_redo" android:onClick="redo" style="@style/toolbar_icon"/>
+                <View style="@style/spacer"/>
+                <ImageView android:onClick="picker" android:src="@drawable/ic_color" style="@style/toolbar_icon"/>
+                <ImageView android:onClick="tobrus" android:src="@drawable/ic_brush" style="@style/toolbar_icon" />
+                <ImageView android:onClick="torect" android:src="@drawable/ic_rect" style="@style/toolbar_icon"/>
+                <ImageView android:onClick="tocirc" android:src="@drawable/ic_circle" style="@style/toolbar_icon"/>
+                <ImageView android:onClick="toline" android:src="@drawable/ic_line" style="@style/toolbar_icon"/>
+            </LinearLayout>
+        </HorizontalScrollView>
+    </LinearLayout>
+</RelativeLayout>
